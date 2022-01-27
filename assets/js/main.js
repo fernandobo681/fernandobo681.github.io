@@ -108,7 +108,7 @@ let resumeButton = document.getElementById('resume-button')
 // Html2pdf options
 let opt = {
     margin:       0,
-    filename:     'myResume.pdf',
+    filename:     'resume-FernandoBolaños.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
     html2canvas:  { scale: 4 },
     jsPDF:        { format: 'a4', orientation: 'portrait' }
@@ -125,7 +125,7 @@ resumeButton.addEventListener('click', ()=>{
     scaleCv()
 
     // 2. The PDF is generated
-    generateResume()
+    // generateResume()
 
     // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
 
