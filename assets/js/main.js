@@ -132,6 +132,6 @@ resumeButton.addEventListener('click', ()=>{
     // setTimeout(areaCv, 5000);
     setTimeout(() => {
         removeScale();
-    }, 50000);
+    }, 500000);
 })
    
