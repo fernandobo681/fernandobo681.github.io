@@ -122,7 +122,7 @@ function generateResume(){
 // When the button is clicked, it executes the three functions
 resumeButton.addEventListener('click', ()=>{
  // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-    scaleCv()
+    scaleCv();
 
     // 2. The PDF is generated
     // generateResume()
@@ -131,7 +131,7 @@ resumeButton.addEventListener('click', ()=>{
 
     // setTimeout(areaCv, 5000);
     setTimeout(() => {
-        removeScale();
-    }, 500000);
+        // removeScale();
+    }, 5000);
 })
    
