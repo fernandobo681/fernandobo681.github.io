@@ -155,7 +155,6 @@ function changeLanguage() {
         document.getElementById("socialmedia-title").innerText = "REDES SOCIALES";
         document.getElementById("education-title-id").innerText = "EDUCACIÓN";
         document.getElementById("bachelor-school").innerText = "INGENIERÍA EN SISTEMAS COMPUTACIONALES";
-        document.getElementById("english-school").innerText = "ESCUELA DE INGLES";
         document.getElementById("skill-id").innerText = "HABILIDADES";
         document.getElementById("profile-description").innerText = "Desde mi infancia he sido apasionado por la tecnología, fascinado por cómo funcionan herramientas cotidianas como las páginas web y las aplicaciones móviles, así como por las complejidades de innovaciones avanzadas como la inteligencia artificial o la computación cuántica. A lo largo de los años, he perfeccionado mis habilidades en una amplia variedad de herramientas de desarrollo de software, junto con una capacidad para generar ideas innovadoras dentro de estas plataformas. En el camino, he desarrollado un enfoque estratégico para diseñar y optimizar algoritmos para sistemas y aplicaciones. Lo que más me entusiasma es el desafío de crear soluciones complejas y elegantes utilizando las mejores tecnologías.";
         document.getElementById("experience-id").innerText = "Experiencia";
@@ -177,7 +176,7 @@ function changeLanguage() {
         document.getElementById("positive-attitude").innerText = "Actitud positiva";
         document.getElementById("languages-id").innerText = "Idiomas";
         document.getElementById("spanish").innerText = "Español";
-        document.getElementById("english").innerText = "Ingles";
+        document.getElementById("english").innerText = "Ingles (Intermedio)";
         document.getElementById("interests-id").innerText = "Intereses";
         document.getElementById("music").innerText = "Música";
         document.getElementById("travel").innerText = "Viajes";
@@ -206,8 +205,7 @@ function changeLanguage() {
         document.getElementById("interests-title").innerText = "Interests";
         document.getElementById("socialmedia-title").innerText = "SOCIAL MEDIA";
         document.getElementById("education-title-id").innerText = "EDUCATION";
-        document.getElementById("bachelor-school").innerText = "COMPUTER SYSTEMS ENGINEERING";
-        document.getElementById("english-school").innerText = "ENGLISH SCHOOL";
+        document.getElementById("bachelor-school").innerText = "BACHELOR OF SCIENCE IN COMPUTER ENGINEERING";
         document.getElementById("skill-id").innerText = "SKILLS";
         document.getElementById("profile-description").innerText = " I’ve been passionate about technology since childhood, captivated by how everyday tools like web pages and mobile applications function, as well as the intricacies of advanced innovations such as artificial intelligence or quantum computing. Over the years, I’ve honed my skills in a wide array of software development tools, coupled with a knack for generating innovative ideas within these platforms. Along the way, I’ve developed a strategic mindset for designing and optimizing algorithms for systems and applications. What excites me most is the challenge of crafting complex, elegant solutions using the best technologies.";
         document.getElementById("experience-id").innerText = "Experience";
@@ -229,7 +227,7 @@ function changeLanguage() {
         document.getElementById("positive-attitude").innerText = "Positive attitude";
         document.getElementById("languages-id").innerText = "Languages";
         document.getElementById("spanish").innerText = "Spanish";
-        document.getElementById("english").innerText = "English";
+        document.getElementById("english").innerText = "English (Intermedium)";
         document.getElementById("interests-id").innerText = "Interests";
         document.getElementById("music").innerText = "Music";
         document.getElementById("travel").innerText = "Travel";
