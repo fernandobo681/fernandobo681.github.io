@@ -6,11 +6,12 @@
   --header-height: 3rem;
   
   /*========== Colors ==========*/
-  --title-color: #0B0A0A;
-  --text-color: #403A3A;
-  --text-color-light: #707070;
+  --title-color: #FFF;
+  --text-color: #FFF;
+  --text-color-secondary: #000;
+  --text-color-light: #FFF;
   --container-color: #FAFAFA;
-  --container-color-alt: #F0EFEF;
+  --container-color-alt: #11365c;
   --body-color: #FCFCFC;
 
   /*========== Font and typography ==========*/
@@ -218,13 +219,23 @@ img{
   padding: 1.5rem 0;  
 }
 
-.section-title{
+.section-title {
   font-size: var(--h2-font-size);
-  color: var(--title-color);
+  color: var( --text-color-secondary);
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
   letter-spacing: .35rem;
   text-align: center;
+  margin-bottom: var(--mb-3);
+}
+
+.section-title-secondary{
+  font-size: var(--h2-font-size);
+  color: var( --text-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  text-align: left;
   margin-bottom: var(--mb-3);
 }
 /*========== LAYOUT ==========*/
@@ -447,6 +458,14 @@ img{
   gap: .5rem;
 }
 
+.black_text{
+  color: #000;
+}
+
+.black_bg{
+  background-color: #000;
+}
+
 .education__title,
 .experience__title{
   font-size: var(--h3-font-size);
@@ -466,7 +485,7 @@ img{
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills__content,
 .languages__content{
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
 .skills__content,
@@ -530,8 +549,12 @@ img{
 
 .interests__icon{
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--text-color-secondary);
   margin-bottom: .25rem;
+}
+
+.interests__name{
+  color: var(--text-color-secondary);
 }
 
 /* Scroll top */
