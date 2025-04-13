@@ -6,11 +6,12 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --title-color: #0B0A0A;
-  --text-color: #403A3A;
-  --text-color-light: #707070;
+  --title-color: #FFF;
+  --text-color: #FFF;
+  --text-color-secondary: #000;
+  --text-color-light: #FFF;
   --container-color: #FAFAFA;
-  --container-color-alt: #F0EFEF;
+  --container-color-alt: #11365c;
   --body-color: #FCFCFC;
 
   /*========== Font and typography ==========*/
@@ -228,7 +229,17 @@ img {
 
 .section-title {
   font-size: var(--h2-font-size);
-  color: var(--title-color);
+  color: var(--text-color-secondary);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  text-align: center;
+  margin-bottom: var(--mb-3);
+}
+
+.section-title-secondary {
+  font-size: var(--h2-font-size);
+  color: var(--text-color-secondary);
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
   letter-spacing: .35rem;
@@ -255,7 +266,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--container-color-alt);
   box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
   transition: .5s;
 }
@@ -275,7 +286,7 @@ img {
     left: 0;
     width: 100%;
     padding: 2rem 1.5rem;
-    background-color: var(--body-color);
+    background-color: var(--container-color-alt);
     border-radius: 1rem 1rem 0 0;
     z-index: var(--z-fixed);
     transition: .5s;
@@ -298,7 +309,7 @@ img {
   text-align: center;
 }
 
-.nav__list {
+.n\\ av__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -356,9 +367,11 @@ img {
 
 .home__title {
   font-size: var(--h1-font-size);
+  color: var(--text-color-secondary) !important;
 }
 
 .home__profession {
+  color: var(--text-color-secondary) !important;
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
 }
@@ -404,7 +417,7 @@ img {
   display: inline-flex;
   align-items: center;
   font-size: var(--small-font-size);
-  color: var(--text-color);
+  color: var(--text-color-secondary);
 }
 
 .social__link:hover {
@@ -438,7 +451,7 @@ img {
   display: block;
   width: 16px;
   height: 16px;
-  background-color: var(--text-color-light);
+  background-color: var(--text-color-secondary);
   border-radius: 50%;
   margin-top: .25rem;
 }
@@ -457,26 +470,41 @@ img {
   gap: .5rem;
 }
 
+.black_text {
+  color: #000;
+}
+
+.black_bg {
+  background-color: #000;
+}
+
 .education__title,
 .experience__title {
   font-size: var(--h3-font-size);
+  color: var(--text-color-secondary);
+}
+
+.experience__company {
+  color: var(--text-color-secondary);
+  margin-bottom: 2rem
 }
 
 .education__studies,
 .experience__studies {
   font-size: var(--small-font-size);
-  color: var(--title-color);
+  color: var(--text-color-secondary);
 }
 
 .education__year,
 .experience__year {
   font-size: var(--smaller-font-size);
+  color: var(--text-color-secondary);
 }
 
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills__content,
 .languages__content {
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
 .skills__content,
@@ -489,6 +517,7 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-3);
+  color: var(--text-color-secondary);
 }
 
 .skills__circle,
@@ -496,7 +525,7 @@ img {
   display: inline-block;
   width: 5px;
   height: 5px;
-  background-color: var(--text-color);
+  background-color: var(--text-color-secondary);
   border-radius: 50%;
   margin-right: .75rem;
 }
@@ -540,8 +569,12 @@ img {
 
 .interests__icon {
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--text-color-secondary);
   margin-bottom: .25rem;
+}
+
+.interests__name {
+  color: var(--text-color-secondary);
 }
 
 /* Scroll top */
@@ -584,6 +617,47 @@ img {
 @media screen and (min-width: 968px) {
   body {
     margin: 3rem 0;
+  }
+
+  .skills__circle,
+  .languages__circle {
+    display: inline-block;
+    background-color: var(--text-color-light);
+  }
+
+  .skills__name,
+  .languages__name {
+    color: var(--text-color-light);
+  }
+
+  .education__rounder {
+    background-color: var(--text-color-light);
+  }
+
+  .education__title {
+    color: var(--text-color-light);
+  }
+
+  .education__year,
+  .experience__year {
+    color: var(--text-color-light);
+  }
+
+  .social__link {
+    color: var(--text-color-light);
+  }
+
+  .home__profession {
+    color: var(--text-color-light) !important;
+  }
+
+  .home__title {
+    color: var(--text-color-light) !important;
+  }
+
+  .section-title-secondary {
+    color: var(--text-color-light);
+    text-align: left;
   }
 
   .bd-container {
@@ -643,22 +717,33 @@ img {
     grid-template-columns: repeat(4, max-content);
     column-gap: 3.5rem;
   }
-}
 
+  .footer-heart {
+    text-align: center;
+    color: #000;
+  }
 
-.btn-language {
-  display: inline-block;
-  border: 2px solid var(--text-color);
-  color: var(--title-color);
-  border-radius: .25rem;
-  transition: .3s;
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-3);
-  padding: 0.5rem 1rem;
-}
+  .footer-heart a {
+    text-align: center !important;
+    border-bottom: 1px solid #453886;
+    color: #11365c;
+    padding-bottom: .25em;
+    text-decoration: none;
+  }
 
-.btn-lan {
-  all: unset;
-  cursor: pointer;
-  float: right;
+  .footer-heart a:hover {
+    text-align: center;
+    color: #386786;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20%;
+    border-bottom: 0;
+    padding-bottom: .3em;
+    text-decoration: none;
+  }
+
+  .emoji {
+    vertical-align: middle;
+  }
 }
