@@ -1,650 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernando Bolaños | FullStack Developer</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zIDI0aDE5di0yM2gtMXYyMmgtMTh2MXptMTctMjRoLTE4djIyaDE4di0yMnptLTEgMWgtMTZ2MjBoMTZ2LTIwem0tMiAxNmgtMTJ2MWgxMnYtMXptMC0zaC0xMnYxaDEydi0xem0wLTNoLTEydjFoMTJ2LTF6bS03LjM0OC0zLjg2M2wuOTQ4LjNjLS4xNDUuNTI5LS4zODcuOTIyLS43MjUgMS4xNzgtLjMzOC4yNTctLjc2Ny4zODUtMS4yODcuMzg1LS42NDMgMC0xLjE3MS0uMjItMS41ODUtLjY1OS0uNDE0LS40MzktLjYyMS0xLjA0LS42MjEtMS44MDIgMC0uODA2LjIwOC0xLjQzMi42MjQtMS44NzguNDE2LS40NDYuOTYzLS42NjkgMS42NDItLjY2OS41OTIgMCAxLjA3My4xNzUgMS40NDMuNTI1LjIyMS4yMDcuMzg2LjUwNS40OTYuODkybC0uOTY4LjIzMWMtLjA1Ny0uMjUxLS4xNzctLjQ0OS0uMzU4LS41OTQtLjE4Mi0uMTQ2LS40MDMtLjIxOC0uNjYzLS4yMTgtLjM1OSAwLS42NS4xMjktLjg3NC4zODYtLjIyMy4yNTgtLjMzNS42NzUtLjMzNSAxLjI1MiAwIC42MTMuMTEgMS4wNDkuMzMxIDEuMzA4LjIyLjI2LjUwNi4zOS44NTguMzkuMjYgMCAuNDg0LS4wODIuNjcxLS4yNDguMTg3LS4xNjUuMzIyLS40MjUuNDAzLS43Nzl6bTMuMDIzIDEuNzhsLTEuNzMxLTQuODQyaDEuMDZsMS4yMjYgMy41ODQgMS4xODYtMy41ODRoMS4wMzdsLTEuNzM0IDQuODQyaC0xLjA0NHoiLz48L3N2Zz4=">
 
-    <!--========== BOX ICONS ==========-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="./assets/css/styles.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --secondary: #555;
+      --accent: #1f2937;
+    }
 
-    <link rel="icon" href="./assets/img/fb-logo.svg">
+    body.dark {
+      --bg: #0b1120;
+      --text: #f1f5f9;
+      --secondary: #94a3b8;
+      --accent: #e5e7eb;
+    }
 
-    <title>Fernando Bolaños | Resume</title>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: .3s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 6px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .section-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: var(--secondary);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media print {
+      .controls {
+        display: none;
+      }
+    }
+
+    .controls-floating {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .controls-floating .btn {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      font-size: 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .controls-floating .btn span {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Ocultar botones al imprimir */
+    @media print {
+      .controls-floating {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="#" class="nav__logo">FERNANDO <b>BOLAÑOS</b></a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="bx bx-home nav__icon"></i>Home
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#education" class="nav__link">
-                            <i class="bx bx-book nav__icon"></i>Education
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="bx bx-receipt nav__icon"></i>Skills
-                        </a>
-                    </li>
-
-
-                    <li class="nav__item">
-                        <a href="#profile" class="nav__link">
-                            <i class="bx bx-user nav__icon"></i>Profile
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">
-                            <i class="bx bx-briefcase-alt nav__icon"></i>Work Experience
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#certificates" class="nav__link">
-                            <i class="bx bx-certification nav__icon"></i>Certificates
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#aptitudes" class="nav__link">
-                            <i class="bx bx-brain nav__icon"></i>Aptitudes
-                        </a>
-                    </li>
-
-                    <!-- <li class="nav__item">
-                            <a href="#languages" class="nav__link">
-                                <i class="bx bx-user-voice nav__icon"></i>Languages
-                            </a>
-                        </li> -->
-
-                    <li class="nav__item">
-                        <a href="#interests" class="nav__link">
-                            <i class="bx bx-heart-circle nav__icon"></i>Interests
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-            <!-- <div class="nav__toggle" id="nav-toggle">
-                <i class="bx bx-grid-alt"></i>
-            </div> -->
-        </nav>
-    </header>
-
-    <main class="l-main bd-container">
-        <!-- All elements within this div, is generated in PDF -->
-        <div class="resume" id="area-cv">
-            <div class="resume__left">
-                <!--========== HOME ==========-->
-                <section class="home" id="home">
-
-                    <div class="home__container section bd-grid">
-                        <div class="home__data bd-grid">
-                            <img src="./assets/img/profile.jpeg" alt="" class="home__img">
-
-                            <h1 class="home__title">FERNANDO <b>BOLAÑOS</b></h1>
-                            <h3 class="home__profession">Full Stack Developer</h3>
-                            <div>
-                                <!-- <a download="" href="./assets/pdf/resume-FernandoBolañosMontejano.pdf"
-                                    class="home__button-movil">Download</a> -->
-                            </div>
-                        </div>
-                        <div class="home__address bd-grid">
-                            <h2 class="section-title-secondary">CONTACT</h2>
-
-                            <span class="home__information">
-                                <a class="social__link" href="https://maps.app.goo.gl/Fcacw2EqwWePRiyh9"
-                                    target="_blank">
-                                    <i class="bx bx-map home__icon"></i> Guadalajara, Jalisco, México.
-                                </a>
-                            </span>
-                            <span class="home__information">
-                                <a class="social__link" href="mailto:fernandobo681@gmail.com">
-                                    <i class="bx bx-envelope home__icon"></i> fernandobo681@gmail.com
-                                </a>
-                            </span>
-                            <span class="home__information">
-                                <a class="social__link" href="tel:+523525616329">
-                                    <i class="bx bx-phone home__icon"></i> +52 352-561-6329
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Theme change button -->
-                    <!-- <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i> -->
-                    <!-- Button to generate and download the PDF. Avaliable for desktop -->
-                    <!-- <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i> -->
-                    <!-- <div>
-                        <a download="" class="generate-pdf" href="./assets/pdf/resume-FernandoBolañosMontejano.pdf"
-                            class="home__button-movil" style="margin-top: -13% !important;"><i
-                                class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i></a>
-                    </div> -->
-
-                </section>
-
-                <!--========== SOCIAL ==========-->
-                <section class="social section">
-                    <h2 class="section-title-secondary">SOCIAL MEDIA</h2>
-                    <div class="social__container bd-grid">
-                        <a href="https://www.linkedin.com/in/fernando-bola%C3%B1os-80166a188/" target="_blank"
-                            class="social__link">
-                            <i class="bx bxl-linkedin-square social__icon"></i>Fernando Bolaños
-                        </a>
-                        <a href="https://gitlab.com/fernando_bmx" target="_blank" class="social__link">
-                            <i class="bx bxl-gitlab social__icon"></i>@fernando_bmx
-                        </a>
-                        <a href="https://github.com/fernandobo681" target="_blank" class="social__link">
-                            <i class="bx bxl-github social__icon"></i>@fernandobo681
-                        </a>
-                    </div>
-                </section>
-
-                <!--========== PROFILE ==========-->
-                <!-- <section class="profile section" id="profile">
-                        <h2 class="section-title">Profile</h2>
-                        <p class="profile__description">I'm passionate about technology since I was a child, I'm fascinated by the way in which things as common as web pages and mobile applications or things as complex as blockchain, artificial intelligence and quantum computing work. Over the past few years, I've learned to use many tools for software development and at the same time I have developed the ability to create great ideas within these tools, and also a more focused thinking to create and optimize algorithms of systems and applications, And best of all, he found a taste for creating complex solutions within powerful tools.</p>
-                    </section> -->
-
-                <!--========== EDUCATION ==========-->
-                <section class="education section" id="education">
-                    <h2 class="section-title-secondary">Education</h2>
-                    <div class="education__container bd-grid">
-                        <div class="education__content">
-                            <div class="education__time">
-                                <span class="education__rounder"></span>
-                                <!-- <span class="education__line"></span> -->
-                            </div>
-                            <div class="education__data bd-grid">
-                                <h3 class="education__title">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
-                                <span class="education__year">Instituto Tecnológico de La Piedad</span>
-                                <span class="education__year">2015 - 2021</span>
-                            </div>
-                        </div>
-                        <!-- <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder"></span>
-                                    <span class="education__line"></span>
-                                </div>
-                                <div class="education__data bd-grid">
-                                    <h3 class="education__title">SCHOOL OF ENGLISH</h3>
-                                    <span class="education__studies">Vocablo</span>
-                                    <span class="education__year">2021 - 2022</span>
-                                </div>
-                            </div>                          -->
-                    </div>
-                </section>
-
-
-                <!--========== CERTIFICATES ==========-->
-                <section class="certificate section" id="certificates">
-                    <h2 class="section-title-secondary">Certificates</h2>
-
-                    <div class="experience__container ">
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="education__rounder "></span>
-                            </div>
-                            <div class="experience__data">
-                                <h3 class="education__title">CERTIFIED OF ENGLISH BY TOEFL ITP</h3>
-                                <span class="education__year ">B1 LEVEL (INTERMEDIUM)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!--========== SKILLS  ==========-->
-                <section class="skills section" id="skills">
-                    <h2 class="section-title-secondary">Aptitudes</h2>
-
-                    <div class="skills__content bd-grid">
-                        <ul class="skills__data">
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Creativity
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Responsability
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Analytical reasoning
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Positive attitude
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Teamwork
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Adaptability
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Perseverance
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Comunication
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Trust
-                            </li>
-                        </ul>
-                    </div>
-
-                </section>
-
-                <!--========== SKILLS  ==========-->
-                <section class="skills section" id="skills">
-                    <h2 class="section-title-secondary">Interests</h2>
-
-                    <div class="skills__content bd-grid">
-                        <ul class="skills__data">
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Travel
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Music
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Read books
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Finance
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Workout
-                            </li>
-
-                            <li class="skills__name">
-                                <span class="skills__circle"></span> Self-taught
-                            </li>
-
-                        </ul>
-                    </div>
-
-                </section>
-
-            </div>
-
-            <div class="resume__right">
-                <!--========== PROFILE ==========-->
-                <section class="profile section" id="profile">
-                    <h2 class="section-title">Profile</h2>
-
-                    <div class="certificate__container bd-grid">
-                        <div class="certificate__content">
-                            <p class="profile__description" style="text-align: justify !important; color: #000;">I’ve
-                                been passionate
-                                about technology since childhood, captivated by how everyday tools like web pages and
-                                mobile applications function, as well as the intricacies of advanced innovations such as
-                                artificial intelligence or quantum computing. Over the years, I’ve honed my skills in a
-                                wide array of software development tools, coupled with a knack for generating innovative
-                                ideas within these platforms. Along the way, I’ve developed a strategic mindset for
-                                designing and optimizing algorithms for systems and applications. What excites me most
-                                is the challenge of crafting complex, elegant solutions using the best technologies.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!--========== EXPERIENCE ==========-->
-                <section class="experience section" id="experience">
-                    <h2 class="section-title">Work Experience</h2>
-                    <div class="experience__container bd-grid">
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                                <span class="experience__line black_bg"></span>
-                            </div>
-
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">FULL STACK DEVELOPER</h3>
-                                <span class="experience__company black_text">From Jun 2019 to Present | Itelisoft</span>
-                                <p class="experience__description black_text" style="text-align: justify !important;">In
-                                    this
-                                    company, I developed innovative solutions for various companies, leveraging
-                                    technologies such as Angular to build robust web applications. I also designed and
-                                    developed mobile applications using Ionic and React Native, successfully deploying
-                                    them on both Android and iOS platforms. Additionally, I developed and managed APIs
-                                    using frameworks like Express and Laravel, and designed databases both SQL (MySQL)
-                                    and NoSQL (MongoDB). I utilized tools like Git for version control and applied agile
-                                    methodologies such as SCRUM to ensure efficient development. Moreover, I deployed
-                                    services on platforms like AWS and Firebase, and published applications on the App
-                                    Store and Google Play, ensuring optimal performance in production environments.</p>
-                            </div>
-
-                        </div>
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                                <!-- <span class="experience__line"></span> -->
-                            </div>
-
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">FRONT END DEVELOPER</h3>
-                                <span class="experience__company black_text">From Jan 2021 to Jun 2021 | Purpura
-                                    Analytics</span>
-                                <p class="experience__description black_text" style="text-align: justify !important;">At
-                                    this
-                                    company, I developed innovative solutions for a tequila manufacturer, streamlining
-                                    and optimizing their entire production process. This involved leveraging tools such
-                                    as React Native, the Scandit SDK, and agile methodologies to deliver efficient and
-                                    scalable results.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </section>
-
-
-                <!--========== REFERENCES ==========-->
-                <!-- <section class="references section" id="references">
-                        <h2 class="section-title">References</h2>
-                        <div class="references__container bd-grid">
-                            <div class="references__content bd-grid">
-                                <span class="references__subtitle">Sr. Director</span>
-                                <h3 class="references__title">Mr. Clay Doe</h3>
-                                <ul class="references__contact">
-                                    <li>Phone: 999-777-5555</li>
-                                    <li>Email: user@email.com</li>
-
-                                </ul>
-                            </div>
-
-                            <div class="references__content bd-grid">
-                                <span class="references__subtitle">Mag. Developer</span>
-                                <h3 class="references__title">Mr. Robbinson Bass</h3>
-                                <ul class="references__contact">
-                                    <li>Phone: 999-777-5555</li>
-                                    <li>Email: user@email.com</li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-
-                    </section> -->
-
-                <!--========== APTITUDES ==========-->
-                <section class="languages section" id="aptitudes">
-                    <h2 class="section-title">Tech Skills</h2>
-
-                    <div class="experience__container bd-grid">
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">WEB DEVELOPMENT (5 years of experience)</h3>
-                                <span class="black_text">Front End: HTML, CSS, JavaScript,
-                                    TypeScript, React, Angular</span>
-                                <span class="black_text">Back End: Node.js, Express, Laravel</span>
-                            </div>
-                        </div>
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">MOBILE DEVELOPMENT (5 years of experience)</h3>
-                                <span class="black_text">Native: Java (Android)</span>
-                                <span class="black_text">Hybrid: Ionic, React Native</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">DATA BASES (5 years of experience)</h3>
-                                <span class="black_text">SQL: MySQL</span>
-                                <span class="black_text">NoSQL: MongoDB, Firebase</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> SOFTWARE DEVELOPMENT WITH AGILE METHODOLOGIES
-                                    (5 year of experience)</h3>
-                                <span class="black_text">Scrum, Continuous Integration and
-                                    Delivery</span>
-                            </div>
-                        </div>
-
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> SOFTWARE ARCHITECTURE (3 year of experience)
-                                </h3>
-                                <span class="black_text">Microservices, monoliths, serverless, API
-                                    REST designing</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> INTERNET OF THINGS (3 year of experience)</h3>
-                                <span class="black_text">Arduino, Raspberry Pi</span>
-                            </div>
-                        </div>
-
-
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> DEVOPS (1 year of experience)</h3>
-                                <span class="black_text">Docker, Kubernetes</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> CLOUDING COMPUTING (1 year of experience)</h3>
-                                <span class="black_text">AWS, Firebase</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> TESTING AND QA (1 year of experience)</h3>
-                                <span class="black_text">Jest</span>
-                            </div>
-                        </div>
-
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text"> COMPUTER SECURITY AND CYBERSECURITY (1 year of
-                                    experience)</h3>
-                                <span class="black_text">Security in APIs, Firewalls, OWASP top 10,
-                                    Credential Management</span>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-
-                    <!-- <div class="languages__container bd-grid">
-                        <ul class="languages__content bd-grid">
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Creativity
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Responsability
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Analytical reasoning
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Teamwork
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Adaptability
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Perseverance
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Trust
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Comunication
-                            </li>
-                            <li class="languages__name">
-                                <span class="languages__circle"></span>Positive attitude
-                            </li>
-                        </ul>
-                    </div> -->
-                </section>
-
-                <!--========== CERTIFICATES ==========-->
-                <!-- <section class="certificate section" id="certificates">
-                    <h2 class="section-title">Certificates</h2>
-
-                    <div class="experience__container bd-grid">
-                        <div class="experience__content">
-                            <div class="experience__time">
-                                <span class="experience__rounder black_bg"></span>
-                            </div>
-                            <div class="experience__data bd-grid">
-                                <h3 class="experience__title black_text">CERTIFIED OF ENGLISH BY TOEFL ITP</h3>
-                                <span class="experience__company black_text">B1 LEVEL (INTERMEDIUM)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-
-                <!--========== LANGUAGES ==========-->
-                <!-- <section class="languages section" id="languages">
-                        <h2 class="section-title">Languages</h2>
-                        <div class="languages__container bd-grid">
-                            <ul class="languages__content bd-grid">
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span>Spanish
-                                </li>
-                                <li class="languages__name">
-                                    <span class="languages__circle"></span>English
-                                </li>
-                            </ul>
-                        </div>
-                    </section> -->
-
-                <!--========== INTERESTS ==========-->
-                <!-- <section class="interests section" id="interests">
-                    <h2 class="section-title">Interests</h2>
-
-                    <div class="interests__container bd-grid">
-                        <div class="interests__content">
-                            <i class="bx bx-headphone interests__icon"></i>
-                            <span class="interests__name">Music</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bxs-plane-alt interests__icon"></i>
-                            <span class="interests__name">Travel</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-book interests__icon"></i>
-                            <span class="interests__name">Read</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-dumbbell interests__icon"></i>
-                            <span class="interests__name">Workout</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-podcast interests__icon"></i>
-                            <span class="interests__name">Podcast</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-bot interests__icon"></i>
-                            <span class="interests__name">AI</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-money interests__icon"></i>
-                            <span class="interests__name">Finance</span>
-                        </div>
-                        <div class="interests__content">
-                            <i class="bx bx-glasses interests__icon"></i>
-                            <span class="interests__name">Self-taught</span>
-                        </div>
-
-                    </div>
-                </section> -->
-
-
-            </div>
-        </div>
-    </main>
-
-    <p class="footer-heart" style="text-align: center !important; color: #000; margin: 3rem 0 3rem 0;">
-        Made with <g-emoji class="g-emoji" alias="heart"
-            fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
-            <img class="emoji" alt="heart" height="20" width="20"
-                src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a
-            href="https://github.com/fernandobo681">Fernando Bolaños</a>
-        <!-- <br>
-        <br>
-
-         &copy; <script>document.write(new Date().getFullYear());</script> JusTech. All rights reserved. -->
+  <div class="controls-floating">
+    <button class="btn" onclick="toggleTheme()">
+      🌗
+    </button>
+
+    <button class="btn" onclick="toggleLang()">
+      <span id="langLabel">ES</span>
+    </button>
+
+    <button class="btn" onclick="downloadPDF()">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 16l4-5h-3V4h-2v7H8l4 
+        5zm-7 2v2h14v-2H5z" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <h1>Fernando Bolaños</h1>
+        <p><strong data-key="title"></strong></p>
+      </div>
+    </div>
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 5-2.3 
+    5-5s-2.3-5-5-5-5 2.3-5 
+    5 2.3 5 5 5zm0 2c-3.3 
+    0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
+      </svg>
+      <span data-key="summary_title"></span>
+    </h2>
+    <p data-key="summary"></p>
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M22.7 19l-9.1-9.1c.4-1 .2-2.2-.6-3l-2-2-2 
+    2 2 2c.8.8 2 1 3 .6l9.1 9.1c.4.4 1 .4 
+    1.4 0l1.2-1.2c.4-.4.4-1 0-1.4z" />
+      </svg>
+      <span data-key="skills_title"></span>
+    </h2>
+    <ul>
+      <li data-key="skills1"></li>
+      <li data-key="skills2"></li>
+      <li data-key="skills3"></li>
+      <li data-key="skills4"></li>
+      <li data-key="skills5"></li>
+      <li data-key="skills6"></li>
+      <li data-key="skills7"></li>
+    </ul>
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M3 13h8V3H3v10zm10 
+    8h8V3h-8v18z" />
+      </svg>
+      <span data-key="pm_title"></span>
+    </h2>
+    <ul>
+      <li data-key="pm1"></li>
+      <li data-key="pm2"></li>
+      <li data-key="pm3"></li>
+      <li data-key="pm4"></li>
+      <li data-key="pm5"></li>
+    </ul>
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M10 2H6a2 2 0 00-2 
+    2v16a2 2 0 002 2h12a2 2 0 
+    002-2V8l-6-6z" />
+      </svg>
+      <span data-key="experience_title"></span>
+    </h2>
+    <ul>
+      <li data-key="experience_text"></li>
+      <br>
+      <li data-key="experience_text2"></li>
+    </ul>
+
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z" />
+      </svg>
+      <span data-key="education_title"></span>
+    </h2>
+    <ul>
+      <li data-key="education_text"></li>
+      <br>
+      <li data-key="certification_text"></li>
+    </ul>
+
+    <h2>
+      <svg class="section-icon" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 
+    2v12a2 2 0 002 2h16a2 2 0 
+    002-2V6a2 2 0 00-2-2z" />
+      </svg>
+      <span data-key="contact_title"></span>
+    </h2>
+
+    <p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="margin-right: 5px;">
+        <path
+          d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+      </svg>
+      Guadalajara, Jalisco, México.
+    </p>
+
+    <p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="margin-right: 5px;">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+      <a href="https://wa.me/523525616329" target="_blank">
+        +52 352 561 6329
+      </a>
+    </p>
+
+    <p>
+      <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+        clip-rule="evenodd" style="margin-right: 5px;">
+        <path
+          d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z" />
+      </svg>
+      <a href="mailto:fernandobo681@gmail.com">
+        fernandobo681@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="margin-right: 5px;">
+        <path
+          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </svg>
+      <a href="https://www.linkedin.com/in/fernando-bola%C3%B1os-80166a188" target="_blank">
+        linkedin.com/in/fernando-bolaños-80166a188
+      </a>
+    </p>
+
+    <p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" style="margin-right: 5px;">
+        <path
+          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+      <a href="https://github.com/fernandobo681" target="_blank">
+        github.com/fernandobo681
+      </a>
     </p>
 
 
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
-    </a>
 
-    <!--========== HTML2PDF ==========-->
-    <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <div class="footer">
+      © 2026 Fernando Bolaños
+    </div>
 
-    <!--========== MAIN JS ==========-->
-    <script src="assets/js/main.js"></script>
+  </div>
+
+  <script>
+    let lang = localStorage.getItem("lang") || "es";
+    let theme = localStorage.getItem("theme") || "light";
+
+    if (theme === "dark") { document.body.classList.add("dark"); }
+
+    const translations = {
+      es: {
+        themeLabel: "Tema",
+        title: "Desarrollador FullStack & Líder Técnico de Proyectos",
+        summary_title: "Resumen Profesional",
+        summary: "Desarrollador FullStack con más de 5 años de experiencia construyendo aplicaciones web y móviles escalables. Experiencia en React, Angular, Node.js, API REST, Bases de Datos e infraestructura en la nube (AWS, Firebase). He trabajado y liderado ciclos completos de desarrollo y coordinación técnica en más de 30 proyectos.",
+        skills_title: "Habilidades Técnicas",
+        skills1: "Frontend: React, Angular, TypeScript, JavaScript, CSS, Tailwind",
+        skills2: "Backend: Node.js, Express, Laravel",
+        skills3: "Mobile: React Native, Ionic",
+        skills4: "Bases de Datos: MySQL, MongoDB, Firebase",
+        skills5: "Cloud & DevOps: AWS, Docker",
+        skills6: "Internet de las cosas: Arduino, Raspberry Pi",
+        skills7: "Pruebas de aseguramiento de la calidad: Jest",
+        pm_title: "Gestión de Proyectos y Liderazgo",
+        pm1: "Metodologías Ágiles (SCRUM)",
+        pm2: "Planeación de sprints y backlog",
+        pm3: "Levantamiento de requerimientos",
+        pm4: "Diseño de arquitectura técnica",
+        pm5: "Coordinación y mentoría de equipo",
+        experience_title: "Experiencia Profesional",
+        experience_text: "Full Stack Developer – Itelisoft (2019 – 2025). Responsable del diseño, desarrollo y despliegue de soluciones web y móviles para diversos clientes, liderando el ciclo completo del proyecto desde arquitectura hasta producción. Construí aplicaciones empresariales con Angular, React y soluciones móviles multiplataforma con Ionic y React Native (Android & iOS). Diseñé APIs REST con Express y Laravel, modelé bases de datos SQL y NoSQL, y gestioné infraestructura en AWS y Firebase. Implementé prácticas ágiles (SCRUM) y control de versiones con Git, garantizando entregas eficientes y aplicaciones de alto rendimiento en producción.",
+        experience_text2: "CEO y Fundador – Koritek (2025 – Presente). Fundé y lidero una empresa tecnológica enfocada en el desarrollo de soluciones de software escalables para empresas. Responsable de la arquitectura técnica, la estrategia de producto y la gestión integral del ciclo de vida de los proyectos, desde el análisis de requerimientos hasta el despliegue en producción. Diseñé y desarrollé plataformas web personalizadas, definí estándares de arquitectura de sistemas y coordiné la colaboración entre equipos multidisciplinarios para entregar soluciones tecnológicas orientadas al negocio. Supervisé la comunicación con clientes, la planificación de recursos y la ejecución técnica para garantizar entregas de alta calidad en tiempo y forma.",
+        education_title: "Educación",
+        education_text: "Ingeniería en Sistemas Computacionales – Instituto Tecnológico de La Piedad (2015–2021).",
+        certification_text: "Certificado de ingles por TOEFL ITP - Nivel B1  (Intermedio)",
+        contact_title: "Contacto"
+      },
+      en: {
+        themeLabel: "Theme",
+        title: "FullStack Developer & Technical Project Leader",
+        summary_title: "Professional Summary",
+        summary: "FullStack Developer with 5+ years of experience building scalable web and mobile applications. Strong expertise with React, Angular, Node.js, REST APIs, databases, and cloud infrastructure (AWS, Firebase). I have worked on and led complete development and technical coordination cycles for over 30 projects.",
+        skills_title: "Technical Skills",
+        skills1: "Frontend: React, Angular, TypeScript, JavaScript, CSS, Tailwind",
+        skills2: "Backend: Node.js, Express, Laravel",
+        skills3: "Mobile: React Native, Ionic",
+        skills4: "Databases: MySQL, MongoDB, Firebase",
+        skills5: "Cloud & DevOps: AWS, Docker",
+        skills6: "Internet of things: Arduino, Raspberry Pi",
+        skills7: "QA testing: Jest",
+        pm_title: "Project Management & Leadership",
+        pm1: "Agile/SCRUM methodologies",
+        pm2: "Sprint planning and backlog management",
+        pm3: "Requirements gathering",
+        pm4: "Technical architecture design",
+        pm5: "Team coordination and mentoring",
+        experience_title: "Professional Experience",
+        experience_text: "Full Stack Developer – Itelisoft (2019–2025). Responsible for the end-to-end design, development, and deployment of web and mobile solutions for multiple clients, leading full project lifecycles from architecture to production. Built enterprise-grade web applications using Angular, React and cross-platform mobile applications with Ionic and React Native (Android & iOS). Designed and implemented RESTful APIs using Express and Laravel, and architected both SQL (MySQL) and NoSQL (MongoDB) database systems. Managed cloud infrastructure and deployments on AWS and Firebase. Applied Agile (SCRUM) methodologies and Git-based version control to ensure efficient delivery, high performance, and production stability, including successful releases to the App Store and Google Play.",
+        experience_text2: "CEO & Founder – Koritek (2025 – Present). I founded and lead a technology-driven company focused on building scalable software solutions for businesses. Responsible for technical architecture, product strategy, and full project lifecycle management—from requirements analysis to deployment. Designed and developed custom web platforms, defined system architecture standards, and coordinated cross-functional collaboration to deliver business-oriented technology solutions. Oversaw client communication, resource planning, and technical execution to ensure high-quality, on-time project delivery.",
+        education_title: "Education",
+        education_text: "Bachelor of Science in Computer Engineering – Instituto Tecnológico de La Piedad (2015–2021).",
+        certification_text: "Certified of english by TOEFL ITP - B1 Nivel (Intermedium)",
+        contact_title: "Contact"
+      }
+    };
+
+    function applyTranslations() {
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.textContent = translations[lang][key];
+      });
+      document.getElementById("langLabel").textContent = lang.toUpperCase();
+    }
+
+    function toggleLang() {
+      lang = lang === "es" ? "en" : "es";
+      localStorage.setItem("lang", lang);
+      applyTranslations();
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      theme = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("theme", theme);
+    }
+
+    function downloadPDF() {
+
+      const controls = document.querySelector(".controls-floating");
+      controls.style.display = "none";
+
+      const element = document.querySelector(".container");
+
+      const opt = {
+        margin: 0.5,
+        filename: 'Fernando_Bolanos_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save().then(() => {
+        controls.style.display = "flex";
+      });
+    }
+
+    applyTranslations();
+  </script>
+
 </body>
 
 </html>
