@@ -164,6 +164,37 @@
         display: none !important;
       }
     }
+
+    @media (max-width: 768px) {
+
+      .container {
+        padding: 25px 18px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      p,
+      li {
+        font-size: 14px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .controls-floating {
+        top: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 
@@ -414,7 +445,16 @@
       localStorage.setItem("theme", theme);
     }
 
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
     function downloadPDF() {
+
+      if (isMobile()) {
+        window.print(); // En móvil abre compartir/guardar como PDF
+        return;
+      }
 
       const controls = document.querySelector(".controls-floating");
       controls.style.display = "none";
